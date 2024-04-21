@@ -5,6 +5,8 @@ import java.util.Map;
 
 import org.hibernate.annotations.Type;
 
+import com.example.testproduct.model.ProductDynamicPriceDetailItemDto;
+
 import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
@@ -30,5 +32,5 @@ public class ProductDynamicPrice extends Product {
 
 	@Column(name = "detail")
 	@Type(JsonBinaryType.class)
-	private List<Map<String, Object>> detail;
+	private List<ProductDynamicPriceDetailItemDto> detail;
 }

@@ -5,6 +5,8 @@ import java.util.Map;
 
 import org.hibernate.annotations.Type;
 
+import com.example.testproduct.model.ProductOptionDto;
+
 import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorColumn;
@@ -44,7 +46,7 @@ public class Product {
 
 	@Column(name = "option")
 	@Type(JsonBinaryType.class)
-	private Map<String, Object> option;
+	private ProductOptionDto option;
 
 	@Column(name = "paid_type")
 	@Type(JsonBinaryType.class)

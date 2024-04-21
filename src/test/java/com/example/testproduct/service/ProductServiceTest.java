@@ -68,7 +68,7 @@ class ProductServiceTest {
 	void findByIdAndCheckOption() throws NotFoundException {
 		ProductDto product = service.findById(1L);
 
-		Assertions.assertEquals(true, product.getOption().get("is_pre_apply_able"));
+		Assertions.assertEquals(true, product.getOption().getIsPreApplyAble());
 	}
 
 	@Test
@@ -86,6 +86,6 @@ class ProductServiceTest {
 
 		Assertions.assertEquals(ProductDynamicPriceDto.class, product.getClass());
 		Assertions.assertFalse(((ProductDynamicPriceDto)product).getDetail().isEmpty());
-		Assertions.assertTrue(((Integer)((ProductDynamicPriceDto)product).getDetail().getFirst().get("price")) > 0);
+		Assertions.assertTrue(((Integer)((ProductDynamicPriceDto)product).getDetail().getFirst().getPrice()) > 0);
 	}
 }

@@ -14,6 +14,6 @@ public class ProductDto {
 	private Long id;
 	private String name;
 	private Integer priceType;
-	private Map<String, Object> option;
+	private ProductOptionDto option;
 	private List<String> paidType;
 }

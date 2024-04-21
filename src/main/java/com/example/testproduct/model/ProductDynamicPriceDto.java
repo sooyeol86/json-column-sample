@@ -12,5 +12,5 @@ import lombok.experimental.SuperBuilder;
 public class ProductDynamicPriceDto extends ProductDto {
 
 	private String rangeName;
-	private List<Map<String, Object>> detail;
+	private List<ProductDynamicPriceDetailItemDto> detail;
 }
